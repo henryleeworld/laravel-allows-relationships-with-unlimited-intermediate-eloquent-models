@@ -4,19 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Staudenmeir\EloquentHasManyDeep\HasEagerLimit;
 use Staudenmeir\EloquentHasManyDeep\HasRelationships;
-use Staudenmeir\EloquentHasManyDeep\HasTableAlias;
 
 class Comment extends Model
 {
-    use HasEagerLimit, HasFactory, HasRelationships, HasTableAlias;
+    use HasFactory, HasRelationships;
 
     public $timestamps = false;
 
     public function replies()
     {
-        return $this->hasMany(self::class, 'parent_id');
+        return $this->hasManyDeep(self::class, 'parent_id');
     }
 
     public function user()
