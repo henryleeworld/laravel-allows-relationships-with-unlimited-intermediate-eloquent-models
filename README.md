@@ -1,4 +1,4 @@
-# Laravel 9 透過居中 Eloquent 模型支援無限級關聯
+# Laravel 10 透過居中 Eloquent 模型支援無限級關聯
 
 引入 staudenmeir 的 eloquent-has-many-deep 套件來擴增透過居中 Eloquent 模型支援無限級關聯，Eloquent 模型讓管理和處理這些關聯變得很容易，並支援多種類型的關聯。
 
@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/EGYw6fV.png)
+![](https://i.imgur.com/Tng7RPB.png)
 > 一個國家有很多使用者，一個使用者有很多貼文，而一篇貼文有很多評論
