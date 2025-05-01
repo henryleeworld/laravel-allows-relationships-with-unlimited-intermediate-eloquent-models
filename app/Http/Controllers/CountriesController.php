@@ -11,7 +11,7 @@ class CountriesController extends Controller
         $country = Country::first();
         $comments = $country->comments;
         foreach ($comments as $comment) {
-            echo '國家代碼：' . $country->id . '，包括評論代碼：' . $comment->id . PHP_EOL;
+            echo __('Country ID:') . $country->id . ' ' . __('includes the comment ID:') . $comment->id . PHP_EOL;
         }
     }
 }
